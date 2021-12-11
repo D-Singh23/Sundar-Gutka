@@ -1,10 +1,12 @@
 :root{
-    --accent: #0071e3;
+    --accent: #4425cc;
     --radius-size: 40px;
 }
 body{
     margin: 0;
-    background: #ececec;
+    padding: 0;
+    background: #FFF;
+    font-family: 'Baloo Paaji 2', cursive;
 }
 
 .header{
@@ -13,16 +15,17 @@ body{
     font-size: 25px;
     margin: 0;
     user-select: none;
-    background: linear-gradient(125deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.95) 100%);
-    color: var(--accent);
-    border: 3px solid #FFF;
-    backdrop-filter: blur(15px);
+    top: 0;
+    position: fixed;
+    background-color: #361cacd5;
+    backdrop-filter: blur(5px);
     border-radius: 0 0 25px 25px;
     display: flex;
     justify-content: center;
     align-content: flex-end;
-    position: fixed;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .wrapper {
@@ -30,8 +33,14 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%
-}    
+    width: 90%;
+    color: #FFF;
+}
+
+.wrapper a{
+  height: 50px;
+  width: 50px;
+}
 
 .head-sec{
     align-self: center;
@@ -43,7 +52,6 @@ body{
     font-size: 0.75rem;
     font-weight: 400;
     margin-top: 20px;
-    text-shadow: #0071e3 0 0 25px;
 }
 
 .heading{
@@ -51,14 +59,12 @@ body{
     font-size: 2rem;
     margin: 0;
     font-family: 'Baloo Paaji 2';
-    text-shadow: #0071e3 0 0 25px;
-    /* font-weight: 600; */
 }
 .list{
     padding: 8rem 3rem;
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .item{
@@ -182,3 +188,32 @@ hr{
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
+
+
+/* Common */
+  .centered{
+    text-align: center;
+  }
+
+  .name{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #FFF;
+  }
+
+  .grayed{
+    color: #242424;
+    font-size: 1.5rem;
+    padding-top: 6rem;
+  }
+
+  .big{
+    color: var(--accent);
+    font-size: 1.75rem;
+  }
+
+  .path{
+    font-size: 1.5rem;
+    margin: 0 2rem
+  }
+/* Common End */
